@@ -1,10 +1,14 @@
 package fp.chapter01
 
 fun main() {
-    println(lazyValue) // hello
+    // 시간이 오래 걸리는 작업
+    // hello
+    // hello
+    println(lazyValue)
+    println(lazyValue)
 }
 
 val lazyValue: String by lazy {
-    // 매우 오래걸리는 작업
+    println("시간이 오래 걸리는 작업")
     "hello"
 }
