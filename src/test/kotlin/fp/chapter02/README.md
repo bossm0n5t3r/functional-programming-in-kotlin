@@ -26,4 +26,4 @@ FileInputStream("config.properties").use {
 
 ### Code
 
-- [Variant.kt](./Variant.kt)
+- [Variant.kt](Variant.kt)
