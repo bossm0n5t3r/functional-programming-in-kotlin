@@ -18,7 +18,7 @@ class Variant {
     private fun contravariant(value: Box<in JVM>) {}
 
     @Test
-    fun run(args: Array<String>) {
+    fun run() {
         val languageBox = object : Box<Language> {}
         val jvmBox = object : Box<JVM> {}
         val kotlinBox = object : Box<Kotlin> {}
