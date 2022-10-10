@@ -116,3 +116,7 @@ tailrec fun <T> FunList<T>.forEach(f: (T) -> Unit): Unit = when (this) {
         tail.forEach(f)
     }
 }
+
+fun toUpper(list: FunList<Char>): FunList<Char> = list.foldLeft(FunList.Nil) { acc: FunList<Char>, char: Char ->
+    acc.addHead(char.uppercaseChar())
+}.reverse()
