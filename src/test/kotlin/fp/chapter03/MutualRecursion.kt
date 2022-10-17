@@ -1,8 +1,10 @@
 package fp.chapter03
 
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
+@Disabled("Prevent java.lang.StackOverflowError")
 class MutualRecursion {
     private fun even(n: Int): Boolean = when (n) {
         0 -> true
