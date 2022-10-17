@@ -7,12 +7,12 @@ import fp.chapter05.toFunStream
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
-class P0521MapByFunStream {
-    private fun <T, R> FunStream<T>.map(f: (T) -> R): FunStream<R> = when (this) {
-        is FunStream.Nil -> FunStream.Nil
-        is FunStream.Cons -> FunStream.Cons({ f(head()) }, { tail().map(f) })
-    }
+fun <T, R> FunStream<T>.map(f: (T) -> R): FunStream<R> = when (this) {
+    is FunStream.Nil -> FunStream.Nil
+    is FunStream.Cons -> FunStream.Cons({ f(head()) }, { tail().map(f) })
+}
 
+class P0521MapByFunStream {
     @Test
     fun mapTest() {
         assertEquals(
