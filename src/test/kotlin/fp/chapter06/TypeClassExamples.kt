@@ -54,7 +54,7 @@ class TypeClassExamples {
         Yellow.print() // Yellow
         Green.print() // Green
 
-        assertEquals(Mon.compare(Tue), 0)
+        assertEquals(Mon.compare(Tue), -1)
         assertFalse(Wen.equal(Thu))
     }
 }
