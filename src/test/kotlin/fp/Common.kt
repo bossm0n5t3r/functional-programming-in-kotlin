@@ -31,3 +31,7 @@ operator fun <T> Sequence<T>.plus(other: () -> Sequence<T>) = object : Sequence<
         override fun hasNext(): Boolean = thisIterator.hasNext() || otherIterator.hasNext()
     }
 }
+
+infix fun <F, G, R> ((F) -> R).compose(g: (G) -> F): (G) -> R {
+    return { gInput: G -> this(g(gInput)) }
+}
