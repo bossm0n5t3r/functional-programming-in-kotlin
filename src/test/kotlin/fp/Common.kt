@@ -35,3 +35,5 @@ operator fun <T> Sequence<T>.plus(other: () -> Sequence<T>) = object : Sequence<
 infix fun <F, G, R> ((F) -> R).compose(g: (G) -> F): (G) -> R {
     return { gInput: G -> this(g(gInput)) }
 }
+
+fun <P1, P2, R> ((P1, P2) -> R).curried(): (P1) -> (P2) -> R = { p1: P1 -> { p2: P2 -> this(p1, p2) } }
