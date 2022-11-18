@@ -3,7 +3,7 @@ package fp.chapter08
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
-private fun identity() = { x: Int -> x }
+fun identity() = { x: Int -> x }
 
 class ApplicativeIdentityLaw {
     @Test
