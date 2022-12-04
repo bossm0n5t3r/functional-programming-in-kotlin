@@ -9,7 +9,7 @@ class SumMonoid : Monoid<Int> {
     override fun mappend(m1: Int, m2: Int): Int = m1 + m2
 }
 
-class SumMonoidLaw {
+class SumMonoidTest {
     @Test
     fun run() {
         val x = 1
