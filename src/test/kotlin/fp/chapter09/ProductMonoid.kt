@@ -9,7 +9,7 @@ class ProductMonoid : Monoid<Int> {
     override fun mappend(m1: Int, m2: Int): Int = m1 * m2
 }
 
-class ProductMonoidLaw {
+class ProductMonoidTest {
     @Test
     fun run() {
         val x = 1
