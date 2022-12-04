@@ -5,12 +5,12 @@ import org.junit.jupiter.api.Test
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
-class P0901AnyMonoid {
-    class AnyMonoid : Monoid<Boolean> {
-        override fun mempty() = false
-        override fun mappend(m1: Boolean, m2: Boolean) = m1 || m2
-    }
+class AnyMonoid : Monoid<Boolean> {
+    override fun mempty() = false
+    override fun mappend(m1: Boolean, m2: Boolean) = m1 || m2
+}
 
+class P0901AnyMonoid {
     @Test
     fun run() {
         AnyMonoid().run {
