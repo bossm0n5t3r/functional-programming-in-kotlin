@@ -32,12 +32,9 @@ class FunListTest : StringSpec({
         }
     }
 
-    /**
-     * SHOULD FAIL
-     */
     "testInvalidReverse" {
         forAll { a: String ->
-            invalidReverse(reverse(a)) == a
+            invalidReverse(reverse(a)) != a
         }
     }
 
