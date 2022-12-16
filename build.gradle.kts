@@ -17,6 +17,10 @@ dependencies {
 
     // assertj-core
     testImplementation("org.assertj:assertj-core:3.23.1")
+
+    // Kotest
+    testImplementation("io.kotest:kotest-runner-junit5:5.5.4")
+    testImplementation("io.kotest:kotest-property:5.5.4")
 }
 
 tasks.test {
