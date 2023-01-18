@@ -16,7 +16,7 @@ dependencies {
     testImplementation(kotlin("test"))
 
     // assertj-core
-    testImplementation("org.assertj:assertj-core:3.23.1")
+    testImplementation("org.assertj:assertj-core:3.24.2")
 
     // Kotest
     testImplementation("io.kotest:kotest-runner-junit5:5.5.4")
